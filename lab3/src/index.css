@@ -1,0 +1,15 @@
+.map {
+    height: 450px;
+    width: 100%;
+    border-radius: 6px;
+}
+.popup .leaflet-popup-content-wrapper,
+.popup .leaflet-popup-tip {
+    background-color: #9382fe;
+    color: #171717;
+}
+@media (max-width: 767px) {
+    .map {
+        height: 320px;
+    }
+}
