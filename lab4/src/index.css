@@ -1,0 +1,22 @@
+.map {
+    height: 450px;
+    width: 100%;
+    border-radius: 6px;
+}
+.popup .leaflet-popup-content-wrapper,
+.popup .leaflet-popup-tip {
+    background-color: #9382fe;
+    color: #171717;
+}
+@media (max-width: 767px) {
+    .map {
+        height: 320px;
+    }
+}
+
+.cafe-nav { background: #244b47; color: white; }
+.cafe-nav a { color: white; text-decoration: none; padding: 6px 10px; border-radius: 4px; }
+.cafe-nav a.active { background: #fff; color: #244b47; }
+.food-card { cursor: pointer; }
+.food-card:hover { border-color: #244b47; background-color: #f5f8f7; }
+.img-cover { object-fit: cover; }
