@@ -1,0 +1,27 @@
+console.log("Objects exercise using F1 examples");
+const team={teamname:"Mercedes",base:"Brackley",principal:"Toto Wolff"};
+console.log(JSON.stringify(team,null,4));
+team.drivers=[{name:"Kimi Antonelli",dob:new Date(2006,7,25),points:[25,18,0,25]},{name:"George Russell",dob:new Date(1998,1,15),points:[12,10,25,8]}];
+team.totalPoints=function(){return this.drivers.flatMap(driver=>driver.points).reduce((a,b)=>a+b,0);};
+console.log(team.totalPoints());
+team.drivers[0].points.push(25);team.drivers[1].points.push(10);
+console.log(team.totalPoints());
+const {teamname,base,drivers}=team;console.log(teamname,base);
+const [,george]=drivers;const [, ...counted]=george.points;
+console.log(counted.reduce((a,b)=>a+b,0));
+console.log("Arrays exercise");
+let examplearray=[1,3,1,7,9];
+console.log(examplearray);console.log(examplearray[1]);console.log(examplearray.length);
+console.log(examplearray.sort((a,b)=>a-b));console.log(examplearray.indexOf(7));
+console.log(examplearray.reverse());console.log(examplearray.pop(),examplearray);
+examplearray.splice(examplearray.indexOf(9),1);console.log(examplearray);
+examplearray=[1,3,1,7,9];
+console.log(examplearray.filter(x=>x<6));console.log(examplearray.filter(x=>x===1));console.log(examplearray);
+console.log(examplearray.map(x=>x*x));console.log(examplearray.map(x=>x+3));
+console.log(examplearray.map(x=>[x,String.fromCharCode(x+64)]));
+console.log(examplearray.reduce((x,y)=>x+y));console.log(examplearray.reduce((x,y)=>x*y));
+console.log(examplearray.reduce((x,y)=>Math.max(x,y)));
+console.log(examplearray.flatMap(x=>[x,String.fromCharCode(x+64)]));
+const coordinates=[[0,1],[3,4],[-5,12],[2,2]];
+function distance(x1,y1,x2,y2){return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));}
+console.log(coordinates.map(([x,y])=>distance(0,0,x,y)).reduce((a,b)=>a+b,0)/coordinates.length);
